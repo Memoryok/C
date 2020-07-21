@@ -1,0 +1,90 @@
+****************************************
+项目名称：彩票管理系统
+作    者：Memory
+开始时间：2019.09.12
+完成时间：2019.09.20
+调试时间：2019.09.22
+更新时间：2019.09.23
+项目周期：2019.09.12-2019.09.24
+项目语言：C语言
+项目环境：Linux系统
+当前版本：lottery_system 2.0
+项目简介：在Linux系统下采用MVC设计模式，底层使用链表对数据操作，使用文件读写对数据进行保存，设定了用户、管理员以及公证员角色，分别对对应的角色设计相关操作界面，不同角色可进行相关操作。
+
+****************************************
+联系作者：
+微信公众号：码出未来1024
+GitHub：https://github.com/Memoryok
+博客：https://juejin.im/user/5d0deb4cf265da1b5e72fcfd
+
+****************************************
+项目相关操作账号：
+管理员账号：admin
+管理员密码：123456
+
+公证员账号：worker
+公证员密码：123456
+
+用户测试账号有：dd ls zs rr ww zz ff cx qq ss gg zxc 12
+用户测试密码均为：123456
+
+****************************************
+项目编译运行流程：
+1、cd lottery_system  --先进入项目文件
+2、make clean         --再删除bin目录下可执行文件和obj目录下.o文件
+3、make               --然后重新编译
+4、./bin/lottery      --最后运行可执行文件
+
+****************************************
+各个功能函数文件：
+bin：
+	lottery--可执行文件
+
+data：
+	issue.bin--每期彩票二进制文件	
+	lottery.bin--彩票二进制文件
+	user.bin--用户二进制文件
+	
+include(对应src文件夹下的.c文件)：
+	admin.h--管理员功能
+	common.h--公共功能
+	controller.h--主要逻辑控制
+	game.h--小游戏
+	issue_link.h--每期彩票链表
+	user.h--用户功能
+	user_link.h--用户链表
+	user_lottery.h--用户个人彩票信息
+	user_lottery_link.h--用户个人彩票信息链表
+	view.h--菜单界面显示
+	worker.h--公证员功能
+
+obj(对应src文件夹下的.c文件编译生成的.o文件)：
+	admin.o
+	common.o
+	controller.o
+	game.o
+	issue_link.o
+	user.o
+	user_link.o
+	user_lottery.o
+	user_lottery_link.o
+	view.o
+	worker.o
+
+src(对应include文件夹下的.h文件)：
+	admin.c
+	common.c
+	controller.c
+	game.c
+	issue_link.c
+	user.c
+	user_link.c
+	user_lottery.c
+	user_lottery_link.c
+	view.c
+	worker.c
+
+lottery.c--主函数
+Makefile--make文件
+
+
